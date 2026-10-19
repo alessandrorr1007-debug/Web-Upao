@@ -1,0 +1,241 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 780" width="100%" height="100%">
+  <defs>
+    <filter id="phoneShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.55" />
+    </filter>
+    <clipPath id="screenClip">
+      <rect x="15" y="15" width="350" height="750" rx="36" />
+    </clipPath>
+  </defs>
+
+  <rect x="10" y="10" width="360" height="760" rx="40" fill="#1A1F2C" stroke="#2D3548" stroke-width="4" filter="url(#phoneShadow)" />
+  
+  <g clip-path="url(#screenClip)">
+    <rect x="15" y="15" width="350" height="750" fill="#0D1117" />
+
+    <!-- Status Bar -->
+    <text x="36" y="42" fill="#E2E6EE" font-size="12" font-family="'Plus Jakarta Sans', Roboto, sans-serif" font-weight="600">09:41</text>
+    <circle cx="190" cy="38" r="6" fill="#000" />
+    <circle cx="316" cy="38" r="3" fill="#E2E6EE" />
+    <path d="M 324 41 L 330 35 L 336 41 Z" fill="#E2E6EE" />
+    <rect x="340" y="34" width="16" height="8" rx="2" fill="none" stroke="#E2E6EE" stroke-width="1.5" />
+    <rect x="342" y="36" width="10" height="4" rx="1" fill="#16A34A" />
+
+    <!-- ==========================================
+         TOP APP BAR (HomeScreen.kt: Page 3 = "Asistencia")
+         ========================================== -->
+    <g transform="translate(24, 62)">
+      <g transform="translate(4, 6)">
+        <line x1="0" y1="3" x2="18" y2="3" stroke="#E2E6EE" stroke-width="2" stroke-linecap="round" />
+        <line x1="0" y1="9" x2="18" y2="9" stroke="#E2E6EE" stroke-width="2" stroke-linecap="round" />
+        <line x1="0" y1="15" x2="18" y2="15" stroke="#E2E6EE" stroke-width="2" stroke-linecap="round" />
+      </g>
+      <text x="36" y="21" fill="#E2E6EE" font-size="18" font-family="'Plus Jakarta Sans', Roboto, sans-serif" font-weight="700">Asistencia</text>
+
+      <g transform="translate(196, 6)">
+        <path d="M 9 2 C 5 2 2 5 2 9 C 2 13 5 16 9 16 C 12 16 14.5 14 15.5 11.5 C 13.5 11.5 11.5 9.5 11.5 7.5 C 11.5 5.5 12.5 4 14 3 C 12.5 2.3 10.8 2 9 2 Z" fill="#9DA5B4" />
+      </g>
+      <g transform="translate(228, 6)">
+        <rect x="0" y="0" width="15" height="18" rx="3" fill="none" stroke="#9DA5B4" stroke-width="1.5" />
+        <rect x="3" y="3" width="9" height="3" rx="1" fill="#9DA5B4" />
+        <circle cx="5" cy="10" r="1" fill="#9DA5B4" />
+        <circle cx="10" cy="10" r="1" fill="#9DA5B4" />
+        <circle cx="5" cy="14" r="1" fill="#9DA5B4" />
+        <circle cx="10" cy="14" r="1" fill="#9DA5B4" />
+      </g>
+      <g transform="translate(260, 6)">
+        <path d="M 8 2 C 5 2 4 4 4 7 L 3 13 L 13 13 L 12 7 C 12 4 11 2 8 2 Z M 6.5 15 A 1.5 1.5 0 0 0 9.5 15" fill="#9DA5B4" />
+      </g>
+      <g transform="translate(296, 6)">
+        <circle cx="7" cy="8" r="3" fill="none" stroke="#9DA5B4" stroke-width="1.5" />
+        <path d="M 7 1 L 7 3 M 7 13 L 7 15 M 1 7 L 3 7 M 13 7 L 15 7" stroke="#9DA5B4" stroke-width="1.5" stroke-linecap="round" />
+      </g>
+    </g>
+
+    <!-- ==========================================
+         RESUMEN ASISTENCIA (AsistenciaScreen.kt: ResumenAsistencia)
+         Icono Schedule + "Semana 7 de 16" + "Periodo 202620 • En curso" + Badge
+         ========================================== -->
+    <g transform="translate(24, 108)">
+      <rect x="0" y="0" width="332" height="58" rx="14" fill="#1F2532" stroke="#262D3D" stroke-width="1" />
+      <g transform="translate(14, 12)">
+        <circle cx="12" cy="17" r="10" fill="none" stroke="#7BA5FF" stroke-width="1.8" />
+        <path d="M 12 11 L 12 17 L 16 17" stroke="#7BA5FF" stroke-width="1.8" stroke-linecap="round" />
+
+        <g transform="translate(32, 4)">
+          <text x="0" y="14" fill="#E2E6EE" font-size="13" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Semana 7 de 16</text>
+          <text x="0" y="27" fill="#9DA5B4" font-size="10" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Periodo 202620 • En curso</text>
+        </g>
+
+        <!-- Badge a la derecha -->
+        <g transform="translate(220, 4)">
+          <rect x="0" y="0" width="84" height="26" rx="8" fill="#163478" />
+          <text x="42" y="17" fill="#7BA5FF" font-size="11" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">Semana 7/16</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- ==========================================
+         LISTA DE ASISTENCIA POR CURSO (AsistenciaCard)
+         Nombre, StatusBadge, Barra de progreso %, Fila destacada de faltas, Círculos L M M J V S
+         ========================================== -->
+    <g transform="translate(24, 178)">
+      <!-- Curso 1: 100% Asistencia -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="332" height="152" rx="14" fill="#1F2532" stroke="#262D3D" stroke-width="1" />
+        <g transform="translate(14, 12)">
+          <!-- Fila Superior: Código curso + StatusBadge + Chevron -->
+          <g>
+            <text x="0" y="12" fill="#7BA5FF" font-size="11" font-weight="600" font-family="'Plus Jakarta Sans', Roboto, sans-serif">NRC 12458</text>
+            
+            <!-- StatusBadge: "0 faltas • 100%" -->
+            <g transform="translate(170, -2)">
+              <rect x="0" y="0" width="104" height="20" rx="10" fill="#16A34A" fill-opacity="0.15" />
+              <text x="52" y="13" fill="#16A34A" font-size="10" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">0 faltas • 100%</text>
+            </g>
+
+            <path d="M 294 4 L 298 8 L 294 12" stroke="#9DA5B4" stroke-width="1.5" fill="none" />
+          </g>
+
+          <!-- Título del Curso -->
+          <text x="0" y="36" fill="#E2E6EE" font-size="13" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Arquitectura De Software</text>
+
+          <!-- Barra de Progreso LinearProgressIndicator -->
+          <g transform="translate(0, 48)">
+            <rect x="0" y="4" width="244" height="6" rx="3" fill="#161B26" />
+            <rect x="0" y="4" width="244" height="6" rx="3" fill="#16A34A" />
+            <text x="300" y="12" fill="#16A34A" font-size="13" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="end">100.0%</text>
+          </g>
+
+          <!-- Fila Destacada: 0 Faltas -->
+          <g transform="translate(0, 72)">
+            <rect x="0" y="0" width="304" height="26" rx="8" fill="#16A34A" fill-opacity="0.10" />
+            <circle cx="120" cy="13" r="5" fill="#16A34A" />
+            <path d="M 118 13 L 120 15 L 123 11" stroke="#FFFFFF" stroke-width="1.2" fill="none" />
+            <text x="134" y="17" fill="#16A34A" font-size="11" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif">0 Faltas</text>
+          </g>
+
+          <!-- Círculos de Días Activos (L M M J V S) -->
+          <g transform="translate(0, 110)">
+            <!-- L (Activo) -->
+            <circle cx="11" cy="11" r="11" fill="#1E56D8" />
+            <text x="11" y="15" fill="#FFFFFF" font-size="10" font-weight="700" font-family="sans-serif" text-anchor="middle">L</text>
+
+            <!-- M -->
+            <circle cx="39" cy="11" r="11" fill="#161B26" />
+            <text x="39" y="15" fill="#9DA5B4" font-size="10" font-family="sans-serif" text-anchor="middle">M</text>
+
+            <!-- M -->
+            <circle cx="67" cy="11" r="11" fill="#161B26" />
+            <text x="67" y="15" fill="#9DA5B4" font-size="10" font-family="sans-serif" text-anchor="middle">M</text>
+
+            <!-- J (Activo) -->
+            <circle cx="95" cy="11" r="11" fill="#1E56D8" />
+            <text x="95" y="15" fill="#FFFFFF" font-size="10" font-weight="700" font-family="sans-serif" text-anchor="middle">J</text>
+
+            <!-- V -->
+            <circle cx="123" cy="11" r="11" fill="#161B26" />
+            <text x="123" y="15" fill="#9DA5B4" font-size="10" font-family="sans-serif" text-anchor="middle">V</text>
+
+            <!-- S -->
+            <circle cx="151" cy="11" r="11" fill="#161B26" />
+            <text x="151" y="15" fill="#9DA5B4" font-size="10" font-family="sans-serif" text-anchor="middle">S</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Curso 2: Con Inasistencias (En riesgo / advertencia 30%) -->
+      <g transform="translate(0, 162)">
+        <rect x="0" y="0" width="332" height="152" rx="14" fill="#1F2532" stroke="#262D3D" stroke-width="1" />
+        <g transform="translate(14, 12)">
+          <g>
+            <text x="0" y="12" fill="#7C3AED" font-size="11" font-weight="600" font-family="'Plus Jakarta Sans', Roboto, sans-serif">NRC 12460</text>
+            
+            <!-- StatusBadge: "En riesgo" -->
+            <g transform="translate(196, -2)">
+              <rect x="0" y="0" width="78" height="20" rx="10" fill="#DC2626" fill-opacity="0.15" />
+              <text x="39" y="13" fill="#F87171" font-size="10" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">En riesgo</text>
+            </g>
+
+            <path d="M 294 4 L 298 8 L 294 12" stroke="#9DA5B4" stroke-width="1.5" fill="none" />
+          </g>
+
+          <text x="0" y="36" fill="#E2E6EE" font-size="13" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Sistemas Distribuidos</text>
+
+          <g transform="translate(0, 48)">
+            <rect x="0" y="4" width="244" height="6" rx="3" fill="#161B26" />
+            <rect x="0" y="4" width="183" height="6" rx="3" fill="#DC2626" />
+            <text x="300" y="12" fill="#F87171" font-size="13" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="end">75.0%</text>
+          </g>
+
+          <g transform="translate(0, 72)">
+            <rect x="0" y="0" width="304" height="26" rx="8" fill="#DC2626" fill-opacity="0.12" />
+            <circle cx="106" cy="13" r="5" fill="#DC2626" />
+            <path d="M 104 11 L 108 15 M 108 11 L 104 15" stroke="#FFFFFF" stroke-width="1.2" />
+            <text x="120" y="17" fill="#F87171" font-size="11" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif">2 Faltas (1 restante)</text>
+          </g>
+
+          <g transform="translate(0, 110)">
+            <circle cx="11" cy="11" r="11" fill="#161B26" /><text x="11" y="15" fill="#9DA5B4" font-size="10" font-family="sans-serif" text-anchor="middle">L</text>
+            <circle cx="39" cy="11" r="11" fill="#7C3AED" /><text x="39" y="15" fill="#FFFFFF" font-size="10" font-weight="700" font-family="sans-serif" text-anchor="middle">M</text>
+            <circle cx="67" cy="11" r="11" fill="#161B26" /><text x="67" y="15" fill="#9DA5B4" font-size="10" font-family="sans-serif" text-anchor="middle">M</text>
+            <circle cx="95" cy="11" r="11" fill="#161B26" /><text x="95" y="15" fill="#9DA5B4" font-size="10" font-family="sans-serif" text-anchor="middle">J</text>
+            <circle cx="123" cy="11" r="11" fill="#7C3AED" /><text x="123" y="15" fill="#FFFFFF" font-size="10" font-weight="700" font-family="sans-serif" text-anchor="middle">V</text>
+            <circle cx="151" cy="11" r="11" fill="#161B26" /><text x="151" y="15" fill="#9DA5B4" font-size="10" font-family="sans-serif" text-anchor="middle">S</text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- ==========================================
+         BOTTOM NAVIGATION BAR (Asistencia activo con indicator)
+         ========================================== -->
+    <g transform="translate(15, 680)">
+      <rect x="0" y="0" width="350" height="70" fill="#12161F" />
+      <line x1="0" y1="0" x2="350" y2="0" stroke="#232936" stroke-width="1" />
+
+      <!-- Tab 1: Hoy -->
+      <g transform="translate(20, 8)">
+        <g transform="translate(19, 4)">
+          <rect x="0" y="1" width="16" height="15" rx="2" fill="none" stroke="#9DA5B4" stroke-width="1.4" />
+        </g>
+        <text x="27" y="39" fill="#9DA5B4" font-size="11" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">Hoy</text>
+      </g>
+
+      <!-- Tab 2: Cursos -->
+      <g transform="translate(86, 8)">
+        <g transform="translate(19, 4)">
+          <path d="M 8 1 L 0 5 L 8 9 L 16 5 Z M 3 7.5 L 3 12 C 3 14 8 16 8 16 C 8 16 13 14 13 12 L 13 7.5" fill="none" stroke="#9DA5B4" stroke-width="1.4" stroke-linejoin="round" />
+        </g>
+        <text x="27" y="39" fill="#9DA5B4" font-size="11" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">Cursos</text>
+      </g>
+
+      <!-- Tab 3: Horario -->
+      <g transform="translate(152, 8)">
+        <g transform="translate(19, 4)">
+          <circle cx="8" cy="8" r="7" fill="none" stroke="#9DA5B4" stroke-width="1.4" />
+          <path d="M 8 4 L 8 8 L 11 8" stroke="#9DA5B4" stroke-width="1.4" stroke-linecap="round" />
+        </g>
+        <text x="27" y="39" fill="#9DA5B4" font-size="11" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">Horario</text>
+      </g>
+
+      <!-- Tab 4: Asistencia (SELECCIONADO: Pill indicator activo) -->
+      <g transform="translate(218, 8)">
+        <rect x="4" y="0" width="46" height="26" rx="13" fill="#163478" />
+        <g transform="translate(19, 4)">
+          <rect x="0" y="1" width="16" height="15" rx="2" fill="none" stroke="#D6E2FF" stroke-width="1.4" />
+          <line x1="4" y1="8" x2="12" y2="8" stroke="#D6E2FF" stroke-width="1.4" />
+        </g>
+        <text x="27" y="39" fill="#7BA5FF" font-size="11" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">Asistencia</text>
+      </g>
+
+      <!-- Tab 5: Canvas -->
+      <g transform="translate(284, 8)">
+        <g transform="translate(19, 4)">
+          <rect x="1" y="2" width="14" height="14" rx="2" fill="none" stroke="#9DA5B4" stroke-width="1.4" />
+        </g>
+        <text x="27" y="39" fill="#9DA5B4" font-size="11" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">Canvas</text>
+      </g>
+    </g>
+  </g>
+</svg>

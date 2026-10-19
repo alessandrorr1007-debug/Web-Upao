@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 780" width="100%" height="100%">
+  <defs>
+    <!-- Filtro sombra de teléfono -->
+    <filter id="phoneShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.55" />
+    </filter>
+    <clipPath id="screenClip">
+      <rect x="15" y="15" width="350" height="750" rx="36" />
+    </clipPath>
+  </defs>
+
+  <!-- Chasis del Smartphone (Material 3 Dark Frame) -->
+  <rect x="10" y="10" width="360" height="760" rx="40" fill="#1A1F2C" stroke="#2D3548" stroke-width="4" filter="url(#phoneShadow)" />
+
+  <g clip-path="url(#screenClip)">
+    <!-- Fondo de pantalla (UpaoBackgroundDark = #0D1117) -->
+    <rect x="15" y="15" width="350" height="750" fill="#0D1117" />
+
+    <!-- Barra de Estado Android (Status Bar) -->
+    <text x="36" y="42" fill="#E2E6EE" font-size="12" font-family="'Plus Jakarta Sans', Roboto, sans-serif" font-weight="600">09:41</text>
+    <!-- Cámara frontal / Punch Hole -->
+    <circle cx="190" cy="38" r="6" fill="#000" />
+    <!-- Iconos de conexión / batería -->
+    <circle cx="316" cy="38" r="3" fill="#E2E6EE" />
+    <path d="M 324 41 L 330 35 L 336 41 Z" fill="#E2E6EE" />
+    <rect x="340" y="34" width="16" height="8" rx="2" fill="none" stroke="#E2E6EE" stroke-width="1.5" />
+    <rect x="342" y="36" width="10" height="4" rx="1" fill="#16A34A" />
+
+    <!-- ==========================================
+         TOP APP BAR OFICIAL (CalculadoraScreen.kt)
+         Volver (<-) | "Calculadora de Notas" | Refresh
+         ========================================== -->
+    <g transform="translate(24, 62)">
+      <!-- Back Arrow Icon -->
+      <g transform="translate(0, 4)">
+        <path d="M 16 7 L 4 7 L 9 2 M 4 7 L 9 12" fill="none" stroke="#E2E6EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+
+      <!-- Título de pantalla -->
+      <text x="32" y="17" fill="#E2E6EE" font-size="18" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Calculadora de Notas</text>
+
+      <!-- Botón de Limpiar / Refresh (animado con tono primario) -->
+      <g transform="translate(304, 2)">
+        <circle cx="10" cy="10" r="14" fill="#161B26" />
+        <path d="M 14 6 A 6 6 0 1 0 16 10 M 16 6 L 16 10 L 12 10" fill="none" stroke="#3B82F6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+    </g>
+
+    <!-- ==========================================
+         PANEL DE RESULTADO (ResultadoBanner)
+         Card: surfaceContainerHigh (#161B26), rx=20
+         ========================================== -->
+    <g transform="translate(24, 108)">
+      <rect x="0" y="0" width="332" height="136" rx="20" fill="#161B26" stroke="#232936" stroke-width="1" />
+
+      <!-- Fila Superior: Título en mayúsculas + Pill de estado -->
+      <g transform="translate(16, 16)">
+        <text x="0" y="12" fill="#9DA5B4" font-size="11" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif" letter-spacing="0.8">NECESITAS EN FINAL</text>
+
+        <!-- Pill badge: EstadoCalculo.ALCANZABLE (color UpaoBlue) -->
+        <g transform="translate(182, -2)">
+          <rect x="0" y="0" width="118" height="22" rx="11" fill="#1E3A8A" fill-opacity="0.35" stroke="#2563EB" stroke-width="1" />
+          <circle cx="12" cy="11" r="3.5" fill="#3B82F6" />
+          <text x="22" y="15" fill="#93C5FD" font-size="10.5" font-weight="600" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Meta alcanzable</text>
+        </g>
+      </g>
+
+      <!-- Número destacado (displaySmall, 42sp, UpaoBlue) -->
+      <g transform="translate(16, 68)">
+        <text x="0" y="0" fill="#3B82F6" font-size="42" font-weight="900" font-family="'Plus Jakarta Sans', Roboto, sans-serif">08.67</text>
+        <text x="124" y="-8" fill="#9DA5B4" font-size="13" font-weight="600" font-family="'Plus Jakarta Sans', Roboto, sans-serif">requerida</text>
+      </g>
+
+      <!-- Barra de progreso delgada (6dp, surfaceVariant + fill UpaoBlue) -->
+      <g transform="translate(16, 80)">
+        <rect x="0" y="0" width="300" height="6" rx="3" fill="#232936" />
+        <!-- 7.90 acumulados sobre 20 pts = 39.5% = 118px -->
+        <rect x="0" y="0" width="118" height="6" rx="3" fill="#3B82F6" />
+      </g>
+
+      <!-- Mensaje explicativo oficial -->
+      <text x="16" y="112" fill="#CBD5E1" font-size="11" font-family="'Plus Jakarta Sans', Roboto, sans-serif">
+        Sacando 08.67 o más en Final apruebas el curso con 10.50.
+      </text>
+    </g>
+
+    <!-- ==========================================
+         SUBTÍTULO EVALUACIONES Y PESOS OFICIALES
+         ========================================== -->
+    <g transform="translate(24, 266)">
+      <text x="0" y="14" fill="#E2E6EE" font-size="15" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Evaluaciones</text>
+      <text x="332" y="14" fill="#9DA5B4" font-size="9.5" font-weight="500" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="end">EP1 20% • Parcial 30% • EP2 20% • Final 30%</text>
+    </g>
+
+    <!-- ==========================================
+         GRID 2x2 DE EVALUACIONES (NotaCard.kt)
+         ========================================== -->
+    <!-- Fila 1: EP1 (20%) y Parcial (30%) -->
+    <g transform="translate(24, 292)">
+      <!-- Card 1: EP1 -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="160" height="136" rx="18" fill="#161B26" stroke="#232936" stroke-width="1" />
+        <g transform="translate(14, 14)">
+          <!-- Header -->
+          <text x="0" y="12" fill="#E2E6EE" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif">EP1</text>
+          <rect x="94" y="0" width="38" height="18" rx="6" fill="#232936" />
+          <text x="113" y="13" fill="#9DA5B4" font-size="10" font-weight="600" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">20%</text>
+
+          <!-- Input Box estilizado (OutlinedTextField) -->
+          <rect x="0" y="26" width="132" height="52" rx="14" fill="#0D1117" stroke="#232936" stroke-width="1.2" />
+          <text x="66" y="60" fill="#22C55E" font-size="24" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">14.0</text>
+
+          <!-- Aporte al promedio -->
+          <text x="66" y="96" fill="#22C55E" font-size="10.5" font-weight="600" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">+2.80 pts al promedio</text>
+        </g>
+      </g>
+
+      <!-- Card 2: Parcial -->
+      <g transform="translate(172, 0)">
+        <rect x="0" y="0" width="160" height="136" rx="18" fill="#161B26" stroke="#232936" stroke-width="1" />
+        <g transform="translate(14, 14)">
+          <!-- Header -->
+          <text x="0" y="12" fill="#E2E6EE" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Parcial</text>
+          <rect x="94" y="0" width="38" height="18" rx="6" fill="#232936" />
+          <text x="113" y="13" fill="#9DA5B4" font-size="10" font-weight="600" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">30%</text>
+
+          <!-- Input Box estilizado (OutlinedTextField) -->
+          <rect x="0" y="26" width="132" height="52" rx="14" fill="#0D1117" stroke="#232936" stroke-width="1.2" />
+          <text x="66" y="60" fill="#22C55E" font-size="24" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">11.0</text>
+
+          <!-- Aporte al promedio -->
+          <text x="66" y="96" fill="#22C55E" font-size="10.5" font-weight="600" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">+3.30 pts al promedio</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Fila 2: EP2 (20%) y Final (30%) -->
+    <g transform="translate(24, 442)">
+      <!-- Card 3: EP2 (Nota roja < 10.5 según lógica real de CalculadoraScreen.kt) -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="160" height="136" rx="18" fill="#161B26" stroke="#232936" stroke-width="1" />
+        <g transform="translate(14, 14)">
+          <!-- Header -->
+          <text x="0" y="12" fill="#E2E6EE" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif">EP2</text>
+          <rect x="94" y="0" width="38" height="18" rx="6" fill="#232936" />
+          <text x="113" y="13" fill="#9DA5B4" font-size="10" font-weight="600" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">20%</text>
+
+          <!-- Input Box con nota < 10.5 en UpaoRed -->
+          <rect x="0" y="26" width="132" height="52" rx="14" fill="#0D1117" stroke="#232936" stroke-width="1.2" />
+          <text x="66" y="60" fill="#EF4444" font-size="24" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">09.0</text>
+
+          <!-- Aporte al promedio -->
+          <text x="66" y="96" fill="#22C55E" font-size="10.5" font-weight="600" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">+1.80 pts al promedio</text>
+        </g>
+      </g>
+
+      <!-- Card 4: Final (Faltante por ingresar con borde enfocado primario) -->
+      <g transform="translate(172, 0)">
+        <rect x="0" y="0" width="160" height="136" rx="18" fill="#161B26" stroke="#2563EB" stroke-width="1.6" />
+        <g transform="translate(14, 14)">
+          <!-- Header -->
+          <text x="0" y="12" fill="#E2E6EE" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Final</text>
+          <rect x="94" y="0" width="38" height="18" rx="6" fill="#1E3A8A" />
+          <text x="113" y="13" fill="#93C5FD" font-size="10" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">30%</text>
+
+          <!-- Input Box vacío con placeholder "0 - 20" -->
+          <rect x="0" y="26" width="132" height="52" rx="14" fill="#0D1117" stroke="#2563EB" stroke-width="1.5" />
+          <text x="66" y="59" fill="#475569" font-size="20" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">0 - 20</text>
+
+          <!-- Indicador de estado -->
+          <text x="66" y="96" fill="#64748B" font-size="10.5" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">Sin ingresar</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- ==========================================
+         PIE DE PÁGINA INFORMATIVO (CalculadoraScreen.kt)
+         "La nota mínima aprobatoria UPAO es 10.5..."
+         ========================================== -->
+    <g transform="translate(24, 600)">
+      <rect x="0" y="0" width="332" height="52" rx="12" fill="#161B26" fill-opacity="0.65" stroke="#232936" stroke-width="1" />
+      <g transform="translate(12, 14)">
+        <!-- Info Icon -->
+        <circle cx="10" cy="11" r="8" fill="none" stroke="#64748B" stroke-width="1.4" />
+        <line x1="10" y1="9" x2="10" y2="15" stroke="#64748B" stroke-width="1.5" stroke-linecap="round" />
+        <circle cx="10" cy="6" r="1" fill="#64748B" />
+
+        <text x="26" y="9" fill="#9DA5B4" font-size="10.5" font-weight="500" font-family="'Plus Jakarta Sans', Roboto, sans-serif">
+          La nota mínima aprobatoria UPAO es 10.5
+        </text>
+        <text x="26" y="22" fill="#64748B" font-size="9.5" font-family="'Plus Jakarta Sans', Roboto, sans-serif">
+          (se redondea a 11 en el acta final oficial).
+        </text>
+      </g>
+    </g>
+
+    <!-- Barra de Gestos Android / Barra de Navegación Inferior -->
+    <rect x="145" y="746" width="90" height="4" rx="2" fill="#4B5563" />
+  </g>
+</svg>

@@ -1,0 +1,263 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 780" width="100%" height="100%">
+  <defs>
+    <!-- Paleta oficial UPAO S (Android Dark Theme) -->
+    <linearGradient id="todayHeroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#123B91" />
+      <stop offset="100%" stop-color="#245DCA" />
+    </linearGradient>
+    <filter id="phoneShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.55" />
+    </filter>
+    <clipPath id="screenClip">
+      <rect x="15" y="15" width="350" height="750" rx="36" />
+    </clipPath>
+  </defs>
+
+  <!-- Chasis del Smartphone -->
+  <rect x="10" y="10" width="360" height="760" rx="40" fill="#1A1F2C" stroke="#2D3548" stroke-width="4" filter="url(#phoneShadow)" />
+  
+  <g clip-path="url(#screenClip)">
+    <!-- Fondo de pantalla (UpaoBackgroundDark = #0D1117) -->
+    <rect x="15" y="15" width="350" height="750" fill="#0D1117" />
+
+    <!-- Barra de Estado Android (Status Bar) -->
+    <text x="36" y="42" fill="#E2E6EE" font-size="12" font-family="'Plus Jakarta Sans', Roboto, sans-serif" font-weight="600">09:41</text>
+    <!-- Cámara frontal / Punch Hole -->
+    <circle cx="190" cy="38" r="6" fill="#000" />
+    <!-- Iconos de conexión / batería -->
+    <circle cx="316" cy="38" r="3" fill="#E2E6EE" />
+    <path d="M 324 41 L 330 35 L 336 41 Z" fill="#E2E6EE" />
+    <rect x="340" y="34" width="16" height="8" rx="2" fill="none" stroke="#E2E6EE" stroke-width="1.5" />
+    <rect x="342" y="36" width="10" height="4" rx="1" fill="#16A34A" />
+
+    <!-- ==========================================
+         TOP APP BAR OFICIAL (HomeScreen.kt)
+         Menú | Título "Hoy" | Theme | Calc | Notif | Settings
+         ========================================== -->
+    <g transform="translate(24, 62)">
+      <!-- Hamburger Menu Icon -->
+      <g transform="translate(4, 6)">
+        <line x1="0" y1="3" x2="18" y2="3" stroke="#E2E6EE" stroke-width="2" stroke-linecap="round" />
+        <line x1="0" y1="9" x2="18" y2="9" stroke="#E2E6EE" stroke-width="2" stroke-linecap="round" />
+        <line x1="0" y1="15" x2="18" y2="15" stroke="#E2E6EE" stroke-width="2" stroke-linecap="round" />
+      </g>
+
+      <!-- Título: Hoy -->
+      <text x="36" y="21" fill="#E2E6EE" font-size="18" font-family="'Plus Jakarta Sans', Roboto, sans-serif" font-weight="700">Hoy</text>
+
+      <!-- Actions (Derecha) -->
+      <!-- 1. Theme Toggle (Luna / Sol) -->
+      <g transform="translate(196, 6)">
+        <path d="M 9 2 C 5 2 2 5 2 9 C 2 13 5 16 9 16 C 12 16 14.5 14 15.5 11.5 C 13.5 11.5 11.5 9.5 11.5 7.5 C 11.5 5.5 12.5 4 14 3 C 12.5 2.3 10.8 2 9 2 Z" fill="#9DA5B4" />
+      </g>
+
+      <!-- 2. Calculadora Icon -->
+      <g transform="translate(228, 6)">
+        <rect x="0" y="0" width="15" height="18" rx="3" fill="none" stroke="#9DA5B4" stroke-width="1.5" />
+        <rect x="3" y="3" width="9" height="3" rx="1" fill="#9DA5B4" />
+        <circle cx="5" cy="10" r="1" fill="#9DA5B4" />
+        <circle cx="10" cy="10" r="1" fill="#9DA5B4" />
+        <circle cx="5" cy="14" r="1" fill="#9DA5B4" />
+        <circle cx="10" cy="14" r="1" fill="#9DA5B4" />
+      </g>
+
+      <!-- 3. Notificaciones con Badge -->
+      <g transform="translate(260, 6)">
+        <path d="M 8 2 C 5 2 4 4 4 7 L 3 13 L 13 13 L 12 7 C 12 4 11 2 8 2 Z M 6.5 15 A 1.5 1.5 0 0 0 9.5 15" fill="#9DA5B4" />
+        <!-- Badge Rojo con "1" -->
+        <circle cx="14" cy="2" r="5" fill="#DC2626" />
+        <text x="14" y="5" fill="#FFFFFF" font-size="8" font-weight="bold" font-family="sans-serif" text-anchor="middle">1</text>
+      </g>
+
+      <!-- 4. Settings Gear Icon -->
+      <g transform="translate(296, 6)">
+        <circle cx="7" cy="8" r="3" fill="none" stroke="#9DA5B4" stroke-width="1.5" />
+        <path d="M 7 1 L 7 3 M 7 13 L 7 15 M 1 7 L 3 7 M 13 7 L 15 7" stroke="#9DA5B4" stroke-width="1.5" stroke-linecap="round" />
+      </g>
+    </g>
+
+    <!-- Semana Académica Banner (HomeScreen.kt: semanaEtiqueta) -->
+    <g transform="translate(24, 108)">
+      <rect x="0" y="0" width="332" height="30" rx="15" fill="#163478" />
+      <g transform="translate(12, 7)">
+        <!-- EventNote Icon -->
+        <path d="M 12 2 L 3 2 C 2.45 2 2 2.45 2 3 L 2 12 C 2 12.55 2.45 13 3 13 L 12 13 C 12.55 13 13 12.55 13 12 L 13 3 C 13 2.45 12.55 2 12 2 Z M 11 11 L 4 11 L 4 10 L 11 10 L 11 11 Z M 11 8 L 4 8 L 4 7 L 11 7 L 11 8 Z" fill="#D6E2FF" />
+        <text x="20" y="11" fill="#D6E2FF" font-size="11" font-family="'Plus Jakarta Sans', Roboto, sans-serif" font-weight="600">Semana 7: 12 oct - 18 oct</text>
+      </g>
+    </g>
+
+    <!-- ==========================================
+         TODAY HERO CARD (TodayCards.kt: TodayHero)
+         Fondo degradado azul oficial, fecha, "HOY", 3 métricas
+         ========================================== -->
+    <g transform="translate(24, 150)">
+      <rect x="0" y="0" width="332" height="136" rx="22" fill="url(#todayHeroGrad)" />
+      
+      <!-- Fila Fecha + Badge HOY -->
+      <g transform="translate(14, 14)">
+        <text x="0" y="12" fill="#FFFFFF" fill-opacity="0.85" font-size="11" font-family="'Plus Jakarta Sans', Roboto, sans-serif" font-weight="500">Lunes, 19 de octubre</text>
+        <rect x="250" y="0" width="46" height="20" rx="10" fill="#FFFFFF" fill-opacity="0.15" />
+        <text x="273" y="14" fill="#FFFFFF" font-size="9" font-family="'Plus Jakarta Sans', Roboto, sans-serif" font-weight="700" text-anchor="middle">HOY</text>
+      </g>
+
+      <!-- Textos: "Tu día, a la vista" -->
+      <g transform="translate(14, 44)">
+        <text x="0" y="14" fill="#FFFFFF" font-size="15" font-family="'Plus Jakarta Sans', Roboto, sans-serif" font-weight="700">Tu día, a la vista</text>
+        <text x="0" y="30" fill="#FFFFFF" fill-opacity="0.85" font-size="11" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Clases, pendientes y novedades de hoy</text>
+      </g>
+
+      <!-- Fila de 3 Métricas HeroMetric (Clases, Pendientes, Novedades) -->
+      <g transform="translate(14, 86)">
+        <!-- Métrica 1: Clases -->
+        <g transform="translate(0, 0)">
+          <rect x="0" y="0" width="94" height="38" rx="10" fill="#FFFFFF" fill-opacity="0.12" />
+          <g transform="translate(8, 7)">
+            <circle cx="6" cy="7" r="5" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-opacity="0.85" />
+            <path d="M 6 4 L 6 7 L 8 7" stroke="#FFFFFF" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.85" />
+            <text x="18" y="11" fill="#FFFFFF" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif">2</text>
+            <text x="0" y="22" fill="#FFFFFF" fill-opacity="0.85" font-size="9" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Clases</text>
+          </g>
+        </g>
+
+        <!-- Métrica 2: Pendientes -->
+        <g transform="translate(104, 0)">
+          <rect x="0" y="0" width="94" height="38" rx="10" fill="#FFFFFF" fill-opacity="0.12" />
+          <g transform="translate(8, 7)">
+            <rect x="1" y="2" width="10" height="11" rx="1" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-opacity="0.85" />
+            <line x1="3" y1="5" x2="9" y2="5" stroke="#FFFFFF" stroke-width="1.2" stroke-opacity="0.85" />
+            <text x="18" y="11" fill="#FFFFFF" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif">3</text>
+            <text x="0" y="22" fill="#FFFFFF" fill-opacity="0.85" font-size="9" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Pendientes</text>
+          </g>
+        </g>
+
+        <!-- Métrica 3: Novedades -->
+        <g transform="translate(208, 0)">
+          <rect x="0" y="0" width="94" height="38" rx="10" fill="#FFFFFF" fill-opacity="0.12" />
+          <g transform="translate(8, 7)">
+            <path d="M 6 2 C 4 2 3 3 3 5 L 2 9 L 10 9 L 9 5 C 9 3 8 2 6 2 Z" fill="#FFFFFF" fill-opacity="0.85" />
+            <text x="18" y="11" fill="#FFFFFF" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif">1</text>
+            <text x="0" y="22" fill="#FFFFFF" fill-opacity="0.85" font-size="9" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Novedades</text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- ==========================================
+         TODAY SCHEDULE CARD (TodayCards.kt: TodaySchedule)
+         Card(shape=24.dp, surfaceContainerHigh) con innerCard(18.dp)
+         ========================================== -->
+    <g transform="translate(24, 298)">
+      <rect x="0" y="0" width="332" height="186" rx="24" fill="#1F2532" stroke="#262D3D" stroke-width="1" />
+      
+      <g transform="translate(16, 14)">
+        <!-- Cabecera de la tarjeta: Icono Schedule + Título -->
+        <rect x="0" y="0" width="36" height="36" rx="12" fill="#262D3D" />
+        <circle cx="18" cy="18" r="8" fill="none" stroke="#7BA5FF" stroke-width="1.6" />
+        <path d="M 18 13 L 18 18 L 22 18" stroke="#7BA5FF" stroke-width="1.6" stroke-linecap="round" />
+
+        <text x="46" y="15" fill="#E2E6EE" font-size="14" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Tus clases de hoy</text>
+        <text x="46" y="30" fill="#7BA5FF" font-size="11" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Tu siguiente clase de hoy</text>
+
+        <!-- Inner Card (surfaceContainerHighest) -->
+        <g transform="translate(0, 46)">
+          <rect x="0" y="0" width="300" height="82" rx="16" fill="#161B26" stroke="#262D3D" stroke-width="1" />
+          <g transform="translate(14, 10)">
+            <text x="0" y="11" fill="#7BA5FF" font-size="10" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif">A LAS 10:45</text>
+            <text x="0" y="30" fill="#E2E6EE" font-size="13" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Sistemas Distribuidos</text>
+            
+            <!-- Ubicación y Horario -->
+            <g transform="translate(0, 46)">
+              <circle cx="4" cy="5" r="3" fill="#9DA5B4" />
+              <path d="M 4 5 L 4 10" stroke="#9DA5B4" stroke-width="1.5" />
+              <text x="12" y="9" fill="#9DA5B4" font-size="11" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Pabellón H - Aula 302</text>
+              <text x="150" y="9" fill="#9DA5B4" font-size="11" font-family="'Plus Jakarta Sans', Roboto, sans-serif">10:45 - 12:30</text>
+            </g>
+          </g>
+        </g>
+
+        <!-- Botón Ver horario -->
+        <g transform="translate(200, 142)">
+          <text x="96" y="16" fill="#7BA5FF" font-size="12" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="end">Ver horario →</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- ==========================================
+         TODAY ASSIGNMENTS (TodayCards.kt: TodayAssignments)
+         Canvas pendientes de hoy
+         ========================================== -->
+    <g transform="translate(24, 496)">
+      <rect x="0" y="0" width="332" height="88" rx="20" fill="#1F2532" stroke="#262D3D" stroke-width="1" />
+      <g transform="translate(14, 12)">
+        <rect x="0" y="0" width="32" height="32" rx="10" fill="#262D3D" />
+        <rect x="8" y="7" width="16" height="18" rx="2" fill="none" stroke="#FFB03A" stroke-width="1.5" />
+        <line x1="12" y1="12" x2="20" y2="12" stroke="#FFB03A" stroke-width="1.5" />
+
+        <text x="42" y="14" fill="#E2E6EE" font-size="13" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Entregas de Canvas</text>
+        <text x="42" y="28" fill="#FFB03A" font-size="11" font-weight="600" font-family="'Plus Jakarta Sans', Roboto, sans-serif">1 pendiente para hoy</text>
+
+        <rect x="0" y="38" width="304" height="28" rx="8" fill="#161B26" />
+        <text x="10" y="56" fill="#E2E6EE" font-size="11" font-weight="600" font-family="'Plus Jakarta Sans', Roboto, sans-serif">Laboratorio Docker • 23:59 hrs</text>
+        <text x="285" y="56" fill="#7BA5FF" font-size="10" font-weight="700" text-anchor="end">Ver</text>
+      </g>
+    </g>
+
+    <!-- ==========================================
+         BOTTOM NAVIGATION BAR OFICIAL (HomeScreen.kt)
+         5 Tabs: Hoy | Cursos | Horario | Asistencia | Canvas
+         Con indicatorColor = primaryContainer
+         ========================================== -->
+    <g transform="translate(15, 680)">
+      <rect x="0" y="0" width="350" height="70" fill="#12161F" />
+      <line x1="0" y1="0" x2="350" y2="0" stroke="#232936" stroke-width="1" />
+
+      <!-- Tab 1: Hoy (SELECCIONADO: Indicator Pill activo) -->
+      <g transform="translate(20, 8)">
+        <!-- Pill indicator de Material 3 -->
+        <rect x="4" y="0" width="46" height="26" rx="13" fill="#163478" />
+        <!-- EventAvailable Icon -->
+        <g transform="translate(19, 4)">
+          <rect x="0" y="1" width="16" height="15" rx="2" fill="none" stroke="#D6E2FF" stroke-width="1.4" />
+          <path d="M 4 8 L 7 11 L 12 5" fill="none" stroke="#D6E2FF" stroke-width="1.5" stroke-linecap="round" />
+        </g>
+        <text x="27" y="39" fill="#7BA5FF" font-size="11" font-weight="700" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">Hoy</text>
+      </g>
+
+      <!-- Tab 2: Cursos (School) -->
+      <g transform="translate(86, 8)">
+        <g transform="translate(19, 4)">
+          <path d="M 8 1 L 0 5 L 8 9 L 16 5 Z M 3 7.5 L 3 12 C 3 14 8 16 8 16 C 8 16 13 14 13 12 L 13 7.5" fill="none" stroke="#9DA5B4" stroke-width="1.4" stroke-linejoin="round" />
+        </g>
+        <text x="27" y="39" fill="#9DA5B4" font-size="11" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">Cursos</text>
+      </g>
+
+      <!-- Tab 3: Horario (Schedule) -->
+      <g transform="translate(152, 8)">
+        <g transform="translate(19, 4)">
+          <circle cx="8" cy="8" r="7" fill="none" stroke="#9DA5B4" stroke-width="1.4" />
+          <path d="M 8 4 L 8 8 L 11 8" stroke="#9DA5B4" stroke-width="1.4" stroke-linecap="round" />
+        </g>
+        <text x="27" y="39" fill="#9DA5B4" font-size="11" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">Horario</text>
+      </g>
+
+      <!-- Tab 4: Asistencia (EventAvailable) -->
+      <g transform="translate(218, 8)">
+        <g transform="translate(19, 4)">
+          <rect x="0" y="1" width="16" height="15" rx="2" fill="none" stroke="#9DA5B4" stroke-width="1.4" />
+          <line x1="4" y1="8" x2="12" y2="8" stroke="#9DA5B4" stroke-width="1.4" />
+        </g>
+        <text x="27" y="39" fill="#9DA5B4" font-size="11" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">Asistencia</text>
+      </g>
+
+      <!-- Tab 5: Canvas (Assignment) -->
+      <g transform="translate(284, 8)">
+        <g transform="translate(19, 4)">
+          <rect x="1" y="2" width="14" height="14" rx="2" fill="none" stroke="#9DA5B4" stroke-width="1.4" />
+          <line x1="4" y1="6" x2="12" y2="6" stroke="#9DA5B4" stroke-width="1.4" />
+          <line x1="4" y1="10" x2="9" y2="10" stroke="#9DA5B4" stroke-width="1.4" />
+        </g>
+        <text x="27" y="39" fill="#9DA5B4" font-size="11" font-family="'Plus Jakarta Sans', Roboto, sans-serif" text-anchor="middle">Canvas</text>
+      </g>
+    </g>
+  </g>
+</svg>
