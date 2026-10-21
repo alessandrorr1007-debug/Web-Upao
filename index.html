@@ -117,14 +117,23 @@
 
           <!-- Botones de Acción -->
           <div class="hero-cta-group">
-            <a href="downloads/app.apk" download="UPAO-S-v1.7.1.apk" class="btn-primary-download" id="hero-download-btn">
-              <span class="btn-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+            <div class="hero-download-wrapper">
+              <a href="downloads/app.apk" download="UPAO-S-v1.7.1.apk" class="btn-primary-download" id="hero-download-btn">
+                <span class="btn-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                  </svg>
+                </span>
+                <span>Descargar APK</span>
+              </a>
+              <div class="apk-update-badge" id="hero-apk-badge" title="Fecha y hora de última compilación">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
                 </svg>
-              </span>
-              <span>Descargar APK</span>
-            </a>
+                <span>Actualizado: <strong class="apk-update-timestamp-text">20 de octubre de 2026, 19:00 hrs</strong></span>
+              </div>
+            </div>
 
             <a href="#como-instalar" class="btn-secondary">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -147,6 +156,55 @@
             <div class="meta-item">
               <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>
               <span>Modo Offline-First</span>
+            </div>
+          </div>
+
+          <!-- Barra de Métricas Reales en Tiempo Real (Visitas y Descargas) -->
+          <div class="live-metrics-panel" id="live-metrics-panel" aria-label="Estadísticas de la aplicación en tiempo real">
+            <div class="metrics-panel-header">
+              <div class="live-indicator-pill">
+                <span class="pulse-dot green" aria-hidden="true"></span>
+                <span class="live-text">En tiempo real</span>
+              </div>
+              <span class="metrics-subtitle">Estadísticas acumuladas reales</span>
+            </div>
+
+            <div class="metrics-counters-grid">
+              <!-- Contador de Visitas / Visualizaciones -->
+              <div class="metric-counter-card">
+                <div class="metric-icon-wrap views-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                  </svg>
+                </div>
+                <div class="metric-info">
+                  <div class="metric-val-row">
+                    <span class="metric-number" id="stats-views-val">
+                      <span class="metric-skeleton-pulse" aria-hidden="true"></span>
+                    </span>
+                  </div>
+                  <span class="metric-desc">Visualizaciones</span>
+                </div>
+              </div>
+
+              <div class="metric-divider-line" aria-hidden="true"></div>
+
+              <!-- Contador de Descargas -->
+              <div class="metric-counter-card">
+                <div class="metric-icon-wrap downloads-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+                  </svg>
+                </div>
+                <div class="metric-info">
+                  <div class="metric-val-row">
+                    <span class="metric-number" id="stats-downloads-val">
+                      <span class="metric-skeleton-pulse" aria-hidden="true"></span>
+                    </span>
+                  </div>
+                  <span class="metric-desc">Descargas de la app</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -702,14 +760,23 @@
           Descarga UPAO S hoy mismo y disfruta de una experiencia fluida, rápida y segura en tu smartphone Android.
         </p>
 
-        <a href="downloads/app.apk" download="UPAO-S-v1.7.1.apk" class="btn-primary-download" style="margin: 0 auto; background: #FFFFFF; color: #0C2766 !important;" id="footer-cta-download">
-          <span class="btn-icon" style="background: rgba(12, 39, 102, 0.1);" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="#0C2766">
-              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+        <div class="footer-download-wrapper">
+          <a href="downloads/app.apk" download="UPAO-S-v1.7.1.apk" class="btn-primary-download" style="margin: 0 auto; background: #FFFFFF; color: #0C2766 !important;" id="footer-cta-download">
+            <span class="btn-icon" style="background: rgba(12, 39, 102, 0.1);" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="#0C2766">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+              </svg>
+            </span>
+            <span style="color: #0C2766;">Descargar APK v1.7.1</span>
+          </a>
+          <div class="apk-update-badge footer-apk-badge" style="color: rgba(255, 255, 255, 0.85); margin-top: 0.6rem; font-size: 0.82rem; display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
-          </span>
-          <span style="color: #0C2766;">Descargar APK v1.7.1</span>
-        </a>
+            <span>Última actualización: <strong class="apk-update-timestamp-text" style="color: #FFFFFF;">20 de octubre de 2026, 19:00 hrs</strong></span>
+          </div>
+        </div>
       </div>
     </section>
   </main>
