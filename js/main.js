@@ -381,7 +381,7 @@ function initApkUpdateMeta() {
   const timestampEls = document.querySelectorAll('.apk-update-timestamp-text');
   if (timestampEls.length === 0) return;
 
-  const defaultFormatted = '20 de octubre de 2026, 19:00 hrs';
+  const defaultFormatted = '20 de octubre de 2026, 19:30 hrs';
 
   async function checkApkTimestamp() {
     try {
