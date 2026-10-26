@@ -7,7 +7,7 @@ Esta carpeta contiene el archivo APK que los usuarios descargarán desde la land
 1. ARCHIVO PRINCIPAL REQUERIDO:
    - Nombre esperado: "app.apk"
    - Ruta completa: /downloads/app.apk
-   - Enlace en la web: <a href="downloads/app.apk" download="UPAO-S-v1.7.1.apk">
+   - Enlace en la web: <a href="downloads/app.apk" download="UPAO-S-v1.7.9.apk">
 
 2. CÓMO ACTUALIZAR EL APK:
    - Cuando compiles una nueva versión release firmada en Android Studio:
@@ -15,7 +15,7 @@ Esta carpeta contiene el archivo APK que los usuarios descargarán desde la land
      D:\Proyectos\UPAO PROC\UPAO S\app\build\outputs\apk\release\UPAO-S-<version>.apk
    - Copia o renombra dicho archivo aquí como:
      "app.apk"
-   - Si cambias la versión en la app (por ejemplo v1.7.2), recuerda también
+   - Si cambias la versión en la app (por ejemplo v1.8.0), recuerda también
      actualizar la etiqueta de versión en index.html.
 
 3. CONFIGURACIÓN EN NETLIFY (netlify.toml):
@@ -27,3 +27,8 @@ Esta carpeta contiene el archivo APK que los usuarios descargarán desde la land
        Content-Disposition = "attachment"
 
 ========================================================================
+
+APK ACTUAL: 1.7.9 (Build 25), 30 079 128 bytes.
+Origen: UPAO S\app\build\outputs\apk\debug\app-debug.apk
+Variante: debug firmada con el mismo certificado que el APK anterior.
+Compilado: 26 de octubre de 2026, 11:46 hrs (America/Lima).
